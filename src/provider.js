@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 const Provider = () => {
   const [AWS, setAWS] = useState(false);
   const [Azure, setAzure] = useState(false);
@@ -8,7 +8,6 @@ const Provider = () => {
   const handleAWS = () => {
     setAWS(AWS);
   };
-
   const handleAzure = () => {
     setAzure(Azure);
   };
@@ -27,6 +26,7 @@ const Provider = () => {
         type="radio"
         onChange={handleAWS}
       />
+      <span> AWS</span>
       <input
         id="cloud"
         name="Azure"
